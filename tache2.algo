@@ -1,0 +1,43 @@
+ALGORITHM car_rental
+VAR
+    nb_km, nb_jour : INTEGER;
+    cout_par_km, cout_par_jour : FLOAT;
+CONST
+    r1 : FLOAT := 0.7;
+    r2 : FLOAT := 0.4;
+    r3 : FLOAT := 0.2;
+    p_d : FLOAT := 100;
+    ins : FLOAT := 0.3;
+    tva : FLOAT := 0.18;
+BEGIN
+    Write("Donne le nombre total de km");
+    Read(nb_km);
+    Write("Donne le nombre total de jour");
+    Read(nb_jour);
+
+    
+    
+    IF (nb_km <= 100) THEN
+        cout_par_km := nb_km * r1;
+    ELSE_IF (nb_km <= 1000) THEN
+        cout_par_km := (nb_km-100) * r2 + 100*r1;
+    ELSE
+        cout_par_km := (nb_km-1000) * r3 + 900 *r2 + 100*r1;
+    END_IF
+    
+    cout_par_km := cout_par_km + (nb_jour*ins);
+    
+    cout_par_km := cout_par_km + ( cout_par_km* tva);
+
+    
+    cout_par_jour := nb_jour * (p_d + ins);
+    
+    cout_par_jour := cout_par_jour * (1+tva);
+
+    // better choice
+    IF (cout_par_km < cout_par_jour) THEN
+        Write("le coût de la location au km est ",coutt_par_km);
+    ELSE
+        Write("le coût de la location au jour est ",cout_par_jour);
+    END_IF
+END

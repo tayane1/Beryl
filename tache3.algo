@@ -1,0 +1,6 @@
+ALGORITHM date
+VAR
+    nb, jour, mois, annee : INTEGER;
+BEGIN
+    set_instructions
+END

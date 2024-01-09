@@ -1,0 +1,18 @@
+ALGORITHM permutation_circulaire
+VAR
+    x, y, z : INTEGER;
+BEGIN
+
+    Write("Donne une valeur à x");
+    Read(x);
+    Write("Donne une valeur à y");
+    Read(y);
+    Write("Donne une valeur à z");
+    Read(z);
+
+    //permutation
+    x := y;
+    y := z;
+    z:= x;
+
+END
