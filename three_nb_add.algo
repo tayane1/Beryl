@@ -1,10 +1,26 @@
 ALGORITHM three_nb_add
 VAR
-    num1,num2,num3 : INTEGER
+    num1,num2,num3 : INTEGER;
+    sum : INTEGER:=0;
 BEGIN
     Read(num1)
     Read(num2)
     Read(num3)
     sum := num1 + num2 + num3;
     Write(sum)
-END three_nb_add
+END
+
+ALGORITHM type de variable
+VAR
+    i:INTEGER:=26;
+    f:FLOAT:=4.56;
+    c:CHAR:="c";
+    s:STRING:="str";
+    b:BOOLEAN:= TRUE;
+BEGIN
+    f:=i;
+    i:=f;
+    f:=c;
+    s:=c;
+    b:=i;
+END

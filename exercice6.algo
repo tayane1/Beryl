@@ -1,0 +1,26 @@
+def est_palindrome(mot):
+    # Condition darrêt : un mot vide ou un mot contenant un seul caractère est un palindrome
+    if len(mot) <= 1:
+        return True
+
+    # Comparaison des caractères situés aux extrémités du mot
+    if mot[0] == mot[-1]:
+        # Appel récursif pour le reste du mot
+        return est_palindrome(mot[1:-1])
+    else:
+        # Si différence, le mot nest pas un palindrome
+        return False
+
+# Exemples 
+mot1 = "radar"
+mot2 = "python"
+
+if est_palindrome(mot1):
+    print(f"{mot1} est un palindrome.")
+else:
+    print(f"{mot1} n'est pas un palindrome.")
+
+if est_palindrome(mot2):
+    print(f"{mot2} est un palindrome.")
+else:
+    print(f"{mot2} n'est pas un palindrome.")
